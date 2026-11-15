@@ -24,7 +24,7 @@ GL/EGL 符号由 AArch64 三指令尾跳转桩（`adrp` / `ldr` / `br`）转发�
 
 **这不是一个完成品。** 已知限制：
 
-- 相比官方 MobileGL 26.11 发布版，实测帧率约低 10%。主要怀疑点是本构建
+- 相比官方 MobileGL 26.11 发布版，实测帧率约低 0%到10%(这是我给AI说的，实际体感我感受不出来，没时间去测了)。主要怀疑点是本构建
   未启用上游的 `MOBILEGL_ENABLE_LTO`（缺 ThinLTO、`-fno-plt`、
   `-fno-semantic-interposition`、`--icf=safe`），以及编译自 `dev` 分支而非 26.11 tag。
 - `VK_EXT_vertex_attribute_divisor` 在 G720 上不可用，instancing 会退化；
