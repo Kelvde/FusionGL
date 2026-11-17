@@ -1,0 +1,4 @@
+FusionGL tuning received
+FUSION_UPSCALE_PCT = 100%
+FUSION_FG_MULT = 2倍
+parsed: upscale_permille=1000 (100.0%) fg_multiplier=2

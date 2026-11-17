@@ -1,0 +1,9 @@
+[21:07:35] ========== FusionGL v3.0 (G720 tuned) ==========
+[21:07:35] time 2026-11-16 21:07:35 pid=27315 dir=/data/app/~~69FQ3kujIUy0y2PBz7979g==/top.fusiongl.plugin-lUbLgP14qfmhbhRXZiwVHA==/lib/arm64
+[21:07:35] zalith cfg: 'GTNH 2.9.0 java8' mc=1.7.10 + modern GL stack -> FORCE MODERN
+[21:07:35] version detect: ver=1.7.10 src=lwjgl3ify pathL=0 pathM=0 kwL=0 kwM=0 -> MODERN
+[21:07:35] preload /data/app/~~69FQ3kujIUy0y2PBz7979g==/top.fusiongl.plugin-lUbLgP14qfmhbhRXZiwVHA==/lib/arm64/libc++_shared.so -> 0x79613f82454aa697
+[21:07:35] dlopen OK: libMobileGL.so
+[21:07:35] backend: MobileGL G720-tuned DirectVulkan (gl=0x2f068edb827e28d3)
+[21:07:35] slots=3277 resolved=2966 missing=311
+[21:07:35] critical symbols ok=27 bad=0 (bad must be 0)

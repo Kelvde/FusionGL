@@ -1,0 +1,22 @@
+java.util.ServiceConfigurationError: com.gtnewhorizons.angelica.glsm.backend.RenderBackend: Provider com.gtnewhorizons.angelica.glsm.backend.Lwjgl2GLRenderBackend could not be instantiated @@ java.util.ServiceLoader.fail(Unknown Source) | CAUSE: java.lang.VerifyError: Bad local variable type
+Exception Details:
+  Location:
+    com/gtnewhorizons/angelica/glsm/backend/Lwjgl2GLRenderBackend.getActiveUniform(IIILjava/nio/IntBuffer;)Ljava/lang/String; @12: iload_0
+  Reason:
+    Type 'com/gtnewhorizons/angelica/glsm/backend/Lwjgl2GLRenderBackend' (current frame, locals[0]) is not assignable to integer
+  Current Frame:
+    bci: @12
+    flags: { }
+    locals: { 'com/gtnewhorizons/angelica/glsm/backend/Lwjgl2GLRenderBackend', integer, integer, integer, 'java/nio/IntBuffer', 'java/nio/IntBuffer', 'java/nio/IntBuffer' }
+    stack: { }
+  Bytecode:
+    0x0000000: 04b8 002f 3a05 04b8 002f 3a06 1a1b 1c19
+    0x0000010: 0519 06b8 0340 3a07 1904 0319 0503 b603
+    0x0000020: 43b6 0347 5719 0404 1906 03b6 0343 b603
+    0x0000030: 4757 1907 b0                           
+ @@ java.lang.Class.getDeclaredConstructors0(Native Method)
+=====
+java.util.ServiceConfigurationError: com.gtnewhorizons.angelica.glsm.backend.RenderBackend: Provider com.gtnewhorizons.angelica.lwjgl3.Lwjgl3GLRenderBackend could not be instantiated @@ java.util.ServiceLoader.fail(Unknown Source) | CAUSE: java.lang.NoClassDefFoundError: org/lwjgl/sdl/SDL_EventFilterI @@ java.lang.Class.getDeclaredConstructors0(Native Method) | CAUSE: java.lang.ClassNotFoundException: org.lwjgl.sdl.SDL_EventFilterI @@ java.net.URLClassLoader.findClass(Unknown Source)
+=====
+java.util.ServiceConfigurationError: com.gtnewhorizons.angelica.glsm.backend.RenderBackend: Provider com.gtnewhorizons.angelica.sdlgpu.SDLGPURenderBackend could not be instantiated @@ java.util.ServiceLoader.fail(Unknown Source) | CAUSE: java.lang.NoClassDefFoundError: org/lwjgl/sdl/SDL_LogOutputFunctionI @@ com.gtnewhorizons.angelica.sdlgpu.SDLGPUGate.device(SDLGPUGate.java:54) | CAUSE: java.lang.ClassNotFoundException: org.lwjgl.sdl.SDL_LogOutputFunctionI @@ java.net.URLClassLoader.findClass(Unknown Source)
+=====

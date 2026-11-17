@@ -1,0 +1,13 @@
+[01:29:20] ========== FusionGL v3.3 (G720 tuned, isolated libc++ SONAME) ==========
+[01:29:20] time 2026-11-18 01:29:20 pid=15044 dir=/data/app/~~kUqpnE-B0ktJEbImBh67xA==/top.fusiongl.tester-Dj8PZB8oHcwEIB42MmBQFw==/lib/arm64
+[01:29:20] zalith cfg: 'GregTech Leisure' -> mc=1.20.1
+[01:29:20] version detect: ver=1.20.1 src=zalith-cfg pathL=0 pathM=1 kwL=0 kwM=0 -> MODERN
+[01:29:20] ffx probe flag found -> MOBILEGL_FFX_PROBE=1, extra swapchain images=6
+[01:29:20] preload OK: /data/app/~~kUqpnE-B0ktJEbImBh67xA==/top.fusiongl.tester-Dj8PZB8oHcwEIB42MmBQFw==/lib/arm64/libc++_fusion.so -> 0xd85d0e100e78831b
+[01:29:20] libc++ binding: /data/app/~~kUqpnE-B0ktJEbImBh67xA==/top.fusiongl.tester-Dj8PZB8oHcwEIB42MmBQFw==/lib/arm64/libc++_fusion.so
+[01:29:20] libc++ VTT(istringstream) = 0x7cfd7bfe10 [OK]
+[01:29:20] kernel probe: /data/app/~~kUqpnE-B0ktJEbImBh67xA==/top.fusiongl.tester-Dj8PZB8oHcwEIB42MmBQFw==/lib/arm64/libMobileGL.so size=18651976 readable=1
+[01:29:20] dlopen OK(abs,NOW): libMobileGL.so
+[01:29:20] backend: MobileGL G720-tuned DirectVulkan (gl=0xa037421e891f2fd7)
+[01:29:20] slots=3277 resolved=2966 missing=311
+[01:29:20] critical symbols ok=27 bad=0 (bad must be 0)
