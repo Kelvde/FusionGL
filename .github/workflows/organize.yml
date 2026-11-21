@@ -1,0 +1,39 @@
+name: organize
+on: push
+permissions:
+  contents: write
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: reorganize
+        run: |
+          set -e
+          mkdir -p src shaders scripts patches logs licenses docs archive
+          for f in VulkanRendererDevice.cpp VulkanRendererInternal.h VulkanRendererPipeline.cpp VulkanRendererPresent.cpp FfxProbe.cpp FfxProbe.h dispatch.c sym_names.c trampolines.S Android.mk shader_compile.cpp; do
+            if [ -f "$f" ]; then mv -f "$f" src/; fi
+          done
+          for f in fusion_sr_sharpen.comp fusion_sr_upsample.comp fusion_sr_sharpen_spv.h fusion_sr_upsample_spv.h; do
+            if [ -f "$f" ]; then mv -f "$f" shaders/; fi
+          done
+          for f in build_release.sh gen_trampolines.py repack_release.py repack_v3.py verify.py; do
+            if [ -f "$f" ]; then mv -f "$f" scripts/; fi
+          done
+          for f in diff-Device.patch diff-FfxProbe.patch diff-Pipeline.patch diff-Present.patch; do
+            if [ -f "$f" ]; then mv -f "$f" patches/; fi
+          done
+          for f in backend_debug.log backend_debug.log.old-verifyerror ffx_caps.log ffx_pipeline.log ffx_probe.log latest.log latest.log.bak-before-v31 fusion_tuning.log ffx_probe.on; do
+            if [ -f "$f" ]; then mv -f "$f" logs/; fi
+          done
+          for f in COPYING COPYING.LESSER Apache-2.0-SPIRV-Cross.txt NG-GL4ES-LICENSE.txt; do
+            if [ -f "$f" ]; then mv -f "$f" licenses/; fi
+          done
+          if [ -f NOTICE.md ]; then mv -f NOTICE.md docs/; fi
+          if [ -f source-v31-wip.tgz ]; then mv -f source-v31-wip.tgz archive/; fi
+          rm -f .github/workflows/organize.yml
+          git config user.name Aevair
+          git config user.email aevair@users.noreply.github.com
+          git add -A
+          git commit -m "整理仓库结构：源码 / 着色器 / 脚本 / 补丁 / 日志 / 许可证 分类" || true
+          git push
